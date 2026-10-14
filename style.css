@@ -1,0 +1,122 @@
+:root {
+    --primary: #2563eb;
+    --danger: #dc2626;
+    --text: #1f2937;
+    --bg: #f3f4f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+#add-btn {
+    background-color: var(--primary);
+    color: white;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f9fafb;
+}
+
+.delete-btn {
+    background-color: var(--danger);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 10px;
+}
+
+.invoice-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.print-btn {
+    background-color: #059669;
+    color: white;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Print Specific Utility Styles */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .invoice-container {
+        box-shadow: none;
+        max-width: 100%;
+        width: 100%;
+    }
+}
